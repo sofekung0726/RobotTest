@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-01T17:01:38.506342" rpa="false" schemaversion="5">
+<suite id="s1" name="Tc1 Search" source="C:\Users\HP-NPRU\Desktop\robot\tc1_search.robot">
+<test id="s1-t1" name="Search by Keyword TC1001" line="18">
+<kw name="Open WebSite">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:38.616129" level="INFO">Opening browser 'chrome' to base url 'https://sc.npru.ac.th/sc_shortcourses/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T17:01:38.616129" elapsed="1.925714"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T17:01:40.541843" elapsed="0.030728"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:38.616129" elapsed="1.956442"/>
+</kw>
+<kw name="Click Link Menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:40.572571" level="INFO">Clicking link 'xpath=//*[@id="navbarMain"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="navbarMain"]/ul/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:01:40.572571" elapsed="0.287064"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:40.572571" elapsed="0.287064"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:40.861636" level="INFO">Typing text 'ai' into text field 'xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:01:40.860636" elapsed="0.128425"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:01:45.989349" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:01:40.989061" elapsed="5.000288"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:40.860636" elapsed="5.128713"/>
+</kw>
+<kw name="Enter to Search">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-01T17:01:45.989349" elapsed="0.012091"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:46.001440" level="INFO">Sending key(s) ('ENTER',) to xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input element.</msg>
+<msg time="2024-07-01T17:01:46.277719" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-07-01T17:01:46.277719" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-07-01T17:01:46.001440" elapsed="0.436977"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:01:51.439641" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:01:46.438417" elapsed="5.001224"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:45.989349" elapsed="5.450292"/>
+</kw>
+<kw name="Verify Search Results1">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:51.442652" level="INFO">Verifying element 'xpath=/html/body/section/div/div/div[1]/form/div[3]/small' contains exact text 'หลักสูตร 2 รายการ'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[3]/small</arg>
+<arg>${SEARCH_RESULT1}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-01T17:01:51.442652" elapsed="0.016476"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:51.439641" elapsed="0.019487"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-01T17:01:51.463579" elapsed="2.121472"/>
+</kw>
+<doc>Test case to search keyword and verify results</doc>
+<tag>search</tag>
+<status status="PASS" start="2024-07-01T17:01:38.616129" elapsed="14.968922"/>
+</test>
+<test id="s1-t2" name="Search by Keyword TC1002" line="28">
+<kw name="Open WebSite">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:53.589757" level="INFO">Opening browser 'chrome' to base url 'https://sc.npru.ac.th/sc_shortcourses/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T17:01:53.589757" elapsed="1.672177"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T17:01:55.261934" elapsed="0.049211"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:53.589757" elapsed="1.721388"/>
+</kw>
+<kw name="Click Link Menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:55.311145" level="INFO">Clicking link 'xpath=//*[@id="navbarMain"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="navbarMain"]/ul/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:01:55.311145" elapsed="0.269653"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:55.311145" elapsed="0.270737"/>
+</kw>
+<kw name="Select Option Menu January">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:01:55.583310" level="INFO">Selecting options from selection list 'name=m' by index 1.</msg>
+<arg>name=m</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-07-01T17:01:55.582307" elapsed="0.288614"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:00.871223" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:01:55.870921" elapsed="5.000302"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:01:55.582307" elapsed="5.288916"/>
+</kw>
+<kw name="Verify Search Results2">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:00.871223" level="INFO">Verifying element 'xpath=/html/body/section/div/div/div[1]/form/div[3]/small' contains exact text 'หลักสูตร 1 รายการ'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[3]/small</arg>
+<arg>${SEARCH_RESULT2}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-01T17:02:00.871223" elapsed="0.010179"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:00.871223" elapsed="0.010179"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:00.881402" elapsed="2.137000"/>
+</kw>
+<doc>Test case to search by select month and verify results</doc>
+<tag>search</tag>
+<status status="PASS" start="2024-07-01T17:01:53.588484" elapsed="9.429918"/>
+</test>
+<test id="s1-t3" name="Search by Keyword TC1003" line="37">
+<kw name="Open WebSite">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:03.018402" level="INFO">Opening browser 'chrome' to base url 'https://sc.npru.ac.th/sc_shortcourses/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T17:02:03.018402" elapsed="1.664365"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T17:02:04.682767" elapsed="0.035027"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:03.018402" elapsed="1.699392"/>
+</kw>
+<kw name="Click Link Menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:04.718793" level="INFO">Clicking link 'xpath=//*[@id="navbarMain"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="navbarMain"]/ul/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:04.718793" elapsed="0.265863"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:04.718793" elapsed="0.266863"/>
+</kw>
+<kw name="Check Categoty">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:04.985656" level="INFO">Selecting checkbox 'xpath=//*[@id="categoryItem1"]'.</msg>
+<arg>xpath=//*[@id="categoryItem1"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:04.985656" elapsed="0.280672"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:10.266717" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:05.266328" elapsed="5.000389"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:04.985656" elapsed="5.281061"/>
+</kw>
+<kw name="Verify Search Results3">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:10.266717" level="INFO">Verifying element 'xpath=/html/body/section/div/div/div[1]/form/div[3]/small' contains exact text 'หลักสูตร 5 รายการ'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[3]/small</arg>
+<arg>${SEARCH_RESULT3}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-01T17:02:10.266717" elapsed="0.014782"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:10.266717" elapsed="0.014782"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:10.281499" elapsed="2.123662"/>
+</kw>
+<doc>Test case to search by check categoty and verify results</doc>
+<tag>search</tag>
+<status status="PASS" start="2024-07-01T17:02:03.018402" elapsed="9.386759"/>
+</test>
+<test id="s1-t4" name="Search by Keyword TC1004" line="46">
+<kw name="Open WebSite">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:12.405161" level="INFO">Opening browser 'chrome' to base url 'https://sc.npru.ac.th/sc_shortcourses/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T17:02:12.405161" elapsed="1.675292"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T17:02:14.080453" elapsed="0.022442"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:12.405161" elapsed="1.697734"/>
+</kw>
+<kw name="Click Link Menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:14.102895" level="INFO">Clicking link 'xpath=//*[@id="navbarMain"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="navbarMain"]/ul/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:14.102895" elapsed="0.240028"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:14.102895" elapsed="0.240028"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:14.344923" level="INFO">Typing text 'ai' into text field 'xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:14.343923" elapsed="0.141371"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:19.485893" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:14.485294" elapsed="5.000599"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:14.343923" elapsed="5.141970"/>
+</kw>
+<kw name="Enter to Search">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-01T17:02:19.485893" elapsed="0.015426"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:19.501319" level="INFO">Sending key(s) ('ENTER',) to xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input element.</msg>
+<msg time="2024-07-01T17:02:19.771830" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-07-01T17:02:19.771830" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:19.501319" elapsed="0.437902"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:24.940630" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:19.940224" elapsed="5.000406"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:19.485893" elapsed="5.454737"/>
+</kw>
+<kw name="Select Option Menu March">
+<kw name="Select From List By Index" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:24.941658" level="INFO">Selecting options from selection list 'name=m' by index 3.</msg>
+<arg>name=m</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="PASS" start="2024-07-01T17:02:24.940630" elapsed="0.250284"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:30.194581" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:25.190914" elapsed="5.003667"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:24.940630" elapsed="5.253951"/>
+</kw>
+<kw name="Verify Search Results4">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:30.194581" level="INFO">Verifying element 'xpath=/html/body/section/div/div/div[1]/form/div[3]/small' contains exact text 'หลักสูตร 1 รายการ'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[3]/small</arg>
+<arg>${SEARCH_RESULT4}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-01T17:02:30.194581" elapsed="0.016038"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:30.194581" elapsed="0.016038"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:30.210619" elapsed="2.134581"/>
+</kw>
+<doc>Test case to search by keyword and select month and verify results</doc>
+<tag>search</tag>
+<status status="PASS" start="2024-07-01T17:02:12.405161" elapsed="19.940039"/>
+</test>
+<test id="s1-t5" name="Search by Keyword TC1005" line="57">
+<kw name="Open WebSite">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:32.345200" level="INFO">Opening browser 'chrome' to base url 'https://sc.npru.ac.th/sc_shortcourses/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T17:02:32.345200" elapsed="1.666602"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T17:02:34.011802" elapsed="0.030450"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:32.345200" elapsed="1.697052"/>
+</kw>
+<kw name="Click Link Menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:34.042252" level="INFO">Clicking link 'xpath=//*[@id="navbarMain"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="navbarMain"]/ul/li[2]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:34.042252" elapsed="0.254490"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:34.042252" elapsed="0.254490"/>
+</kw>
+<kw name="Check Categoty">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:34.298743" level="INFO">Selecting checkbox 'xpath=//*[@id="categoryItem1"]'.</msg>
+<arg>xpath=//*[@id="categoryItem1"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:34.297743" elapsed="0.284071"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:39.583093" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:34.582814" elapsed="5.000279"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:34.297743" elapsed="5.285692"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:39.583435" level="INFO">Typing text 'ai' into text field 'xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T17:02:39.583435" elapsed="0.050000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:44.634747" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:39.633435" elapsed="5.001312"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:39.583435" elapsed="5.051312"/>
+</kw>
+<kw name="Enter to Search">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-01T17:02:44.635598" elapsed="0.012782"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:44.648380" level="INFO">Sending key(s) ('ENTER',) to xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input element.</msg>
+<msg time="2024-07-01T17:02:44.921950" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-07-01T17:02:44.921950" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[1]/div/input</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:44.648380" elapsed="0.534328"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-01T17:02:50.183145" level="INFO">Slept 5 seconds.</msg>
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-01T17:02:45.182708" elapsed="5.000437"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:44.634747" elapsed="5.548398"/>
+</kw>
+<kw name="Verify Search Results5">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-01T17:02:50.183145" level="INFO">Verifying element 'xpath=/html/body/section/div/div/div[1]/form/div[3]/small' contains exact text 'หลักสูตร 2 รายการ'.</msg>
+<arg>xpath=/html/body/section/div/div/div[1]/form/div[3]/small</arg>
+<arg>${SEARCH_RESULT5}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-01T17:02:50.183145" elapsed="0.012204"/>
+</kw>
+<status status="PASS" start="2024-07-01T17:02:50.183145" elapsed="0.012204"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-01T17:02:50.195349" elapsed="2.120189"/>
+</kw>
+<doc>Test case to search by keyword adn check categoty and verify results</doc>
+<tag>search</tag>
+<status status="PASS" start="2024-07-01T17:02:32.345200" elapsed="19.970338"/>
+</test>
+<status status="PASS" start="2024-07-01T17:01:38.520323" elapsed="73.795215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">search</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tc1 Search">Tc1 Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

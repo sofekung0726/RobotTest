@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.4 on win32)" generated="20240826 13:58:08.548" rpa="false" schemaversion="3">
+<suite id="s1" name="Ts1 Google Search" source="C:\Users\ADMIN\Desktop\ROBOT (WORKSPACE)\ts1_1search\ts1_google_search.robot">
+<test id="s1-t1" name="Search Google and Verify Results TC1001" line="15">
+<kw name="Open Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240826 13:58:08.704" level="INFO">Opening browser 'edge' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20240826 13:58:08.710" level="INFO">Executing: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240826 13:58:08.703" endtime="20240826 13:58:15.007"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:08.703" endtime="20240826 13:58:15.008"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240826 13:58:15.009" level="INFO">Typing text 'robot framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20240826 13:58:15.008" endtime="20240826 13:58:15.123"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:15.008" endtime="20240826 13:58:15.123"/>
+</kw>
+<kw name="Enter Google Search">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240826 13:58:15.124" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20240826 13:58:15.417" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240826 13:58:15.417" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240826 13:58:15.124" endtime="20240826 13:58:20.014"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:15.124" endtime="20240826 13:58:20.014"/>
+</kw>
+<kw name="Verify Search Results">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240826 13:58:20.059" level="INFO">Current page contains text 'robot'.</msg>
+<status status="PASS" starttime="20240826 13:58:20.015" endtime="20240826 13:58:20.059"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:20.015" endtime="20240826 13:58:20.059"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240826 13:58:20.059" endtime="20240826 13:58:22.221"/>
+</kw>
+<doc>Test case to search Google and verify results</doc>
+<tag>search</tag>
+<status status="PASS" starttime="20240826 13:58:08.703" endtime="20240826 13:58:22.222"/>
+</test>
+<test id="s1-t2" name="Search Google and Check Results TC1002" line="24">
+<kw name="Open Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240826 13:58:22.224" level="INFO">Opening browser 'edge' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20240826 13:58:22.230" level="INFO">Executing: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240826 13:58:22.223" endtime="20240826 13:58:25.289"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:22.223" endtime="20240826 13:58:25.289"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240826 13:58:25.290" level="INFO">Typing text 'robot framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20240826 13:58:25.290" endtime="20240826 13:58:25.412"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:25.290" endtime="20240826 13:58:25.412"/>
+</kw>
+<kw name="Enter Google Search">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240826 13:58:25.413" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20240826 13:58:25.698" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240826 13:58:25.698" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240826 13:58:25.412" endtime="20240826 13:58:34.871"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:25.412" endtime="20240826 13:58:34.872"/>
+</kw>
+<kw name="Verify Search Results">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240826 13:58:34.924" level="INFO">Current page contains text 'robot'.</msg>
+<status status="PASS" starttime="20240826 13:58:34.872" endtime="20240826 13:58:34.924"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:34.872" endtime="20240826 13:58:34.924"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240826 13:58:34.924" endtime="20240826 13:58:37.077"/>
+</kw>
+<doc>Test case to search Google and verify results</doc>
+<tag>search</tag>
+<status status="PASS" starttime="20240826 13:58:22.223" endtime="20240826 13:58:37.077"/>
+</test>
+<test id="s1-t3" name="Search Google and Check Results TC1003" line="33">
+<kw name="Open Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240826 13:58:37.079" level="INFO">Opening browser 'edge' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20240826 13:58:37.086" level="INFO">Executing: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240826 13:58:37.079" endtime="20240826 13:58:41.269"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:37.079" endtime="20240826 13:58:41.269"/>
+</kw>
+<kw name="Input Search Term">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240826 13:58:41.270" level="INFO">Typing text 'robot framework' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20240826 13:58:41.270" endtime="20240826 13:58:41.395"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:41.270" endtime="20240826 13:58:41.395"/>
+</kw>
+<kw name="Enter Google Search">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240826 13:58:41.397" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20240826 13:58:41.688" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240826 13:58:41.688" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240826 13:58:41.396" endtime="20240826 13:58:49.953"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:41.396" endtime="20240826 13:58:49.953"/>
+</kw>
+<kw name="Verify Search Results">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240826 13:58:49.989" level="INFO">Current page contains text 'robot'.</msg>
+<status status="PASS" starttime="20240826 13:58:49.954" endtime="20240826 13:58:49.989"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:49.954" endtime="20240826 13:58:49.989"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240826 13:58:49.989" endtime="20240826 13:58:52.100"/>
+</kw>
+<doc>Test case to search Google and verify results</doc>
+<tag>search</tag>
+<status status="PASS" starttime="20240826 13:58:37.079" endtime="20240826 13:58:52.101"/>
+</test>
+<test id="s1-t4" name="Search Google and Check Results TC1004" line="42">
+<kw name="Open Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240826 13:58:52.103" level="INFO">Opening browser 'edge' to base url 'https://www.google.com'.</msg>
+<msg timestamp="20240826 13:58:52.109" level="INFO">Executing: C:\Users\ADMIN\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser edge --output json</msg>
+<status status="PASS" starttime="20240826 13:58:52.102" endtime="20240826 13:58:55.776"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:52.102" endtime="20240826 13:58:55.776"/>
+</kw>
+<kw name="Input Search Keyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>${SEARCH_KEYWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240826 13:58:55.777" level="INFO">Typing text 'npru' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20240826 13:58:55.777" endtime="20240826 13:58:55.864"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:55.776" endtime="20240826 13:58:55.864"/>
+</kw>
+<kw name="Enter Google Search">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240826 13:58:55.866" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20240826 13:58:56.150" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20240826 13:58:56.150" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240826 13:58:55.865" endtime="20240826 13:59:16.906"/>
+</kw>
+<status status="PASS" starttime="20240826 13:58:55.865" endtime="20240826 13:59:16.906"/>
+</kw>
+<kw name="Verify Search Result Keyword">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT_KEYWORD}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240826 13:59:16.933" level="INFO">Current page contains text 'University'.</msg>
+<status status="PASS" starttime="20240826 13:59:16.907" endtime="20240826 13:59:16.933"/>
+</kw>
+<status status="PASS" starttime="20240826 13:59:16.907" endtime="20240826 13:59:16.933"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240826 13:59:16.934" endtime="20240826 13:59:19.075"/>
+</kw>
+<doc>Test case to search Google and verify results</doc>
+<tag>search</tag>
+<status status="PASS" starttime="20240826 13:58:52.102" endtime="20240826 13:59:19.076"/>
+</test>
+<status status="PASS" starttime="20240826 13:58:08.549" endtime="20240826 13:59:19.077"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">search</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Ts1 Google Search">Ts1 Google Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
